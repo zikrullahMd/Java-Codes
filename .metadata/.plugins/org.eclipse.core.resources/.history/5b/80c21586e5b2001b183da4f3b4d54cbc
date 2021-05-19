@@ -1,0 +1,52 @@
+package Stack;
+import java.util.*;
+public class StackImplementation {
+	
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Stack{
+	int max = 10000;
+	int[] st = new int[max];
+	int index;
+	
+	public Stack() {
+		index = -1;
+	}
+	
+	public void push(int  x) {
+		if(index > max-1) {
+			System.out.println("Stack Overflow");
+			return;
+		}else {
+			st[index++] = x;
+		}
+	}
+	
+	public int pop() {
+		if(index < 0) {
+			System.out.println("Stack Underlflow");
+			return -1;
+		}else {
+			int x = st[index--];
+			return x;
+		}
+	}
+	
+	public int peek() {
+		if(index < 0) {
+			System.out.println("Stack Underflow");
+			return -1;
+		}
+		int x = st[index];
+		return x;
+	}
+	
+}

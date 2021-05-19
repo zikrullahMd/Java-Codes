@@ -1,0 +1,38 @@
+package Stack;
+import java.util.*;
+public class  GreaterMax_Problem{
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        Stack st = new Stack();
+        Stack max = new Stack();
+        
+        System.out.println("1 -> push");
+        System.out.println("0 -> pop");
+        System.out.println("2 -> greaterMax");
+        while(n-->0) {
+        	int ins = in.nextInt();
+        	if(ins == 1) {
+        		int e = in.nextInt();
+        		st.push(e);
+        		if(!max.empty()) {
+        			if(e>max.peek()) {
+        				max.push(e);
+        			}else {
+        				max.push(max.peek());
+        			}
+        		}else {
+        			max.push(e);
+        		}
+        		//greater pop
+        	}else if(ins == 0) {
+        		if(!max.empty()) {
+        			st.pop();
+        			System.out.println(max.pop());
+        		}
+        	}else if(ins == 2){
+        		System.out.println(max.peek());
+        	}
+        }
+	}
+}

@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class Misc {
+	public static int countunsetbits(long n)
+    {
+        int count = 0;
+          
+        // x holds one set digit at a time
+        // starting from LSB to MSB of n.
+        for (int x = 1; x <= n; x = x<<1)
+            if ((x & n) == 0)
+                count++;    
+      
+        return count;
+    }
+
+    public static void main(String[] arga) {
+         Scanner in = new Scanner(System.in);
+         long t = in.nextLong();
+         while(t-->0) {
+        	 long n = in.nextLong();
+        	 int count = countunsetbits(n);
+        	 System.out.println((count<<2)+1);
+         }
+    }
+}

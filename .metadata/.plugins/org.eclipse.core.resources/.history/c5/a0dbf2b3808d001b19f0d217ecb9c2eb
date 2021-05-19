@@ -1,0 +1,18 @@
+package Codeforces_750;
+import java.util.*;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in  = new Scanner(System.in);
+		long t = in.nextLong();
+		while(t-->0) {
+			long n = in.nextLong();
+			long m = in.nextLong();
+			long x = in.nextLong();
+			long ans = x/m + n;
+			System.out.println(ans);
+		}
+	}
+
+}

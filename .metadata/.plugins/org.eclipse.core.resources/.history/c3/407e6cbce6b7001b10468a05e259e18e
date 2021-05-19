@@ -1,0 +1,23 @@
+import java.util.*;
+import java.math.*;
+import java.util.Map.Entry;
+class Misc{
+	
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int[][] a = {{1,0,1,0,0},{1,0,1,1,1},{1,1,1,1,1},{1,0,0,1,0}};
+        int[] b = new int[a[0].length];
+        int f = 0;
+        for(int i = 0;i<a[0].length;i++) {
+        	int sum = 0;
+        	int j = 0;
+        	while(j < a.length) {
+        		sum += a[j++][i];
+        	}
+        	b[f++] = sum;
+        }
+        for(int i : b) {
+        	System.out.print(i+" ");
+        }
+    }
+}

@@ -1,0 +1,50 @@
+import java.io.*;
+import java.util.*;
+public class Misc {
+	
+	public static int nearSmall(int n,LinkedHashSet<Integer> st) {
+		ArrayList<Integer> prime = new ArrayList<>(st);
+		int low = 0;
+		int ans = 0;
+		int min = 0;
+		int high = prime.size()-1;
+		while(low<=high) {
+			int mid = (low + high) / 2;
+			if(prime.get(mid) == n) {
+				return mid;
+			}
+			if(prime.get(mid) < n) {
+				high = mid - 1;
+			}
+			if(prime.get(mid) > n) {
+				low = mid + 1;
+			}
+			if(Math.abs(prime.get(mid) - n) > min && prime.get(mid) > n) {
+				ans = mid+1;
+			}
+		}
+		return ans;
+	}
+
+    public static void main(String[] arga) {
+         Scanner in = new Scanner(System.in);
+         long t = in.nextLong();
+         while(t-->0) {
+             int n  = in.nextInt();
+             LinkedHashSet<Integer> st = new LinkedHashSet<>();
+             for(int i = 0;i<n;i++) {
+            	 int e = in.nextInt();
+            	 st.add(e);
+             }
+             int q = in.nextInt();
+             while(q-->0) {
+            	 int num = in.nextInt();
+            	 //int ans = (st.size() - nearSmall(num)) + 1;
+            	 System.out.print(nearSmall(num,st)+1+" ");
+            	 //System.out.print(ans+" ");
+             }
+             System.out.println();
+             st.clear();
+         }
+    }
+}

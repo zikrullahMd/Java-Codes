@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Largest_number.Main&apos; to &apos;Solution&apos;&#x0D;&#x0A;- Original project: &apos;EDYST_ALGORITHM&apos;&#x0D;&#x0A;- Original element: &apos;Largest_number.Main&apos;&#x0D;&#x0A;- Renamed element: &apos;Largest_number.Solution&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Main&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Largest_number{Main.java[Main" matchStrategy="1" name="Solution" qualified="false" references="true" similarDeclarations="false" stamp="1601197959213" textual="false" version="1.0"/>
+</session>

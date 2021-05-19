@@ -1,0 +1,18 @@
+package LinkedList;
+import java.util.*;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedList l = new LinkedList();
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		for(int i = 0;i<n;i++) {
+			l.addFirst(in.nextInt());
+		}
+		l.printLL(l.head);
+		System.out.println();
+		System.out.println(l.get(l, 4));
+	}
+
+}

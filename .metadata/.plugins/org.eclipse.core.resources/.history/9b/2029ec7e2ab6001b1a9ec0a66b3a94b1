@@ -1,0 +1,51 @@
+import java.util.*;
+import java.math.*;
+import java.util.Map.Entry;
+class Misc{
+	
+	public static void Sort(int[] a, int low, int high) {
+		if(low==high) return;
+			int mid = (low + high) / 2;
+			Sort(a,0,mid+1);
+			Sort(a,mid-1,high);
+			Merge(a,low,high,mid);
+	}
+	
+	public static void Merge(int[] a, int low, int high , int mid) {
+		int[] temp = new int[high-low+1];
+		int i = low;
+		int j = mid+1;
+		int f = 0;
+		while(i<low && j < high) {
+			if(a[i] < a[j]) {
+				temp[f] = a[i];
+				i++;
+			}else {
+				temp[f] = a[j];
+				j++;
+			}
+			f++;
+		}
+		while(i<low) {
+			temp[f++] = a[i++];
+		}
+		while(j<high) {
+			temp[f++] = a[j++];
+		}
+		
+	}
+	
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] a = new int[n];
+        for(int i = 0;i<n;i++) {
+        	a[i] = in.nextInt();
+        }
+        Sort(a,0,n-1);
+        for(int i : a) {
+        	System.out.print(i+" ");
+        }
+        
+    }
+}

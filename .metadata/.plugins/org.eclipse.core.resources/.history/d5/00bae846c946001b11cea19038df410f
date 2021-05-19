@@ -1,0 +1,23 @@
+package LinkedList;
+import java.util.*;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedList l = new LinkedList();
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		for(int i = 0;i<n;i++) {
+			l.add(in.nextInt());
+		}
+		l.printLL(l.head);
+		System.out.println();
+		System.out.println("want to enter at specific postion? If yes press 2 or -1");
+		int f = in.nextInt();
+		if(f > 0) {
+			l.addAt(in.nextInt(), in.nextInt());
+		}
+		l.printLL(l.head);
+	}
+
+}

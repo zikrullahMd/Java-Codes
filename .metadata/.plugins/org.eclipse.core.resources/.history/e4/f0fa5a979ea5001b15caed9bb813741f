@@ -1,0 +1,17 @@
+import java.io.*;
+import java.util.*;
+
+public class Misc {
+
+    public static void main(String[] arga) {
+         Scanner in = new Scanner(System.in);
+         long t = in.nextLong();
+         while(t-->0) {
+        	 long n = in.nextLong();
+        	 int count = 0;
+        	 while(n>0) {
+        		 
+        	 }
+         }
+    }
+}

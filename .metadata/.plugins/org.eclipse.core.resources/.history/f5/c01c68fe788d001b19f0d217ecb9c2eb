@@ -1,0 +1,34 @@
+package Codeforces_750;
+import java.util.*;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in  = new Scanner(System.in);
+		int t = in.nextInt();
+		while(t-->0) {
+			int n = in.nextInt();
+			int m = in.nextInt();
+			int x = in.nextInt();
+			int[][] a = new int[n][m];
+			int f = 1;
+			for(int i = 0;i<n;i++) {
+				for(int j = 0;j<m;j++) {
+					a[i][j] = f++;
+				}
+			}
+			int ii = 0;
+			int ij = 0;
+			for(int i = 0;i<n;i++) {
+				for(int j = 0;j<m;j++) {
+					if(a[i][j] == x) {
+						ii = i;
+						ij = j;
+					}
+				}
+			}
+			System.out.println(a[ii][ij]);
+		}
+	}
+
+}

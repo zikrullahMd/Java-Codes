@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+public class Misc {
+	
+	static Set<Integer> st = new HashSet<>();
+
+    public static void main(String[] arga) {
+         Scanner in = new Scanner(System.in);
+         long t = in.nextLong();
+         while(t-->0) {
+             int n  = in.nextInt();
+             ArrayList<Integer> list = new ArrayList<>();
+             for(int i = 0;i<n;i++) {
+            	 int e = in.nextInt();
+            	 list.add(e);
+             }
+             int q = in.nextInt();
+             while(q-->0) {
+            	 int num = in.nextInt();
+            	 list.add(num);
+             }
+         }
+    }
+}

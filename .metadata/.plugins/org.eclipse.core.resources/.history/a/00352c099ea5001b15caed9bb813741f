@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public class Misc {
+
+    public static void main(String[] arga) {
+         Scanner in = new Scanner(System.in);
+         long t = in.nextLong();
+         while(t-->0) {
+        	 int n = in.nextInt();
+        	 int count = 0;
+        	 for(int i = 1;i<=n;i++) {
+        		 if(n + i == (n^i)) {
+        			 System.out.println(i);
+        			 count++;
+        		 }
+        	 }
+        	 //System.out.println(count);
+         }
+    }
+}

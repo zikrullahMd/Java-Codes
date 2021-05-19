@@ -1,0 +1,16 @@
+import java.util.*;
+import java.util.Map.Entry;
+import java.math.*;
+import java.awt.*;
+public class Misc{
+	
+	public static void main(String[] arga) {
+ 		Scanner in = new Scanner(System.in);
+ 		long t = in.nextLong();
+ 		while(t-->0) {
+ 			String a = in.next();
+ 			String b = in.next();
+ 			System.out.println(isSubsequence(a,b) ? "Yes" : "No");
+ 		}
+	}
+}
