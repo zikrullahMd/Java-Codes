@@ -15,6 +15,6 @@ public class Max_profit {
 				max = Integer.max(max, d);
 			}
 		}
-		System.out.println(max);
+		System.out.println("Max "+max);
 	}
 }
