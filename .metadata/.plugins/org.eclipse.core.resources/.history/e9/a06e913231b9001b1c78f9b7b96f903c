@@ -1,0 +1,36 @@
+import java.util.*;
+import java.math.*;
+import java.util.Map.Entry;
+class Misc{
+	
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        String[] a = new String[n];
+        for(int i = 0;i<n;i++) {
+        	a[i]  = in.next();
+        }
+        Stack<String> st = new Stack<>();
+        int res = 0;
+        for(int i = 0;i<n;i++) {
+        	String s = a[i];
+        	if(s != "+" && s != "-" && s != "/" && s != "*") {
+        		st.push(a[i]);
+        	}else {
+        		int one = Integer.parseInt(st.pop());
+        		int two = Integer.parseInt(st.pop());
+        		switch(s) {
+        		case "+" : st.push(Integer.toString(one+two));
+        		break;
+        		case "-" : st.push(Integer.toString(one - two));
+        		break;
+        		case "*" : st.push(Integer.toString(one*two));
+        		break;
+        		case "/" : st.push(Integer.toString(Math.max(one, two) / Math.min(one, two)));
+        		break;
+        		}
+        	}
+        }
+        System.out.println(st.peek());
+    }
+}
