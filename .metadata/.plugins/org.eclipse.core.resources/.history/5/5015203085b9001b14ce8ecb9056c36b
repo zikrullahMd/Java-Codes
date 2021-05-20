@@ -1,0 +1,43 @@
+import java.util.*;
+import java.math.*;
+import java.util.Map.Entry;
+public class Misc
+{
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        long n = in.nextInt();
+        long ans =(long) Math.pow(2, n%1000000007);
+        ans %= 1000000007;
+        System.out.println(ans);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

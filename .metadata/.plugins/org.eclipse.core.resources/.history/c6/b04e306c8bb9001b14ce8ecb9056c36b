@@ -1,0 +1,66 @@
+import java.util.*;
+import java.math.*;
+import java.util.Map.Entry;
+public class Misc
+{
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        int q = in.nextInt();
+        while(q-->0) {
+        	long n = in.nextLong();
+        	if(n<=9)
+        		System.out.println(n);
+        	else {
+        		
+        		long div = n/9;
+        		long mod = n%9;
+        		System.out.println(mod-div);
+        	}
+        }
+    }
+}
+
+
+class Node{
+	Node left;
+	Node right;
+	int val;
+	public Node(int val) {
+		left = right = null;
+		this.val = val;
+	}
+	Node root;
+	public void add(int n) {
+		if(root == null) {
+			root = new Node(n);
+		}
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+import java.util.*;
+import java.math.*;
+import java.util.Map.Entry;
+public class Misc
+{
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        BigInteger ans = new BigInteger(Integer.toString(n));
+        ans.pow(2);
+        System.out.println(ans);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
