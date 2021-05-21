@@ -1,0 +1,74 @@
+package BackTracking;
+import java.util.*;
+public class Main {
+	
+	public static boolean NQueens(int[][] a, int n,int row){
+		if(row == n) return true;
+		for(int col = 0;col<n;col++) {
+			if(isSafe(a,row,col)) {
+				a[row][col] = 1;
+				if(NQueens(a,n,row+1)) {
+					return true;
+				}
+				a[row][col] = 0;
+			}
+		}
+		return false;
+	}
+	
+	public static boolean isSafe(int[][] a, int row, int col) {
+		int i,j;
+		for(i = 0;i<col;i++) {
+			if(a[row][i] == 1) {
+				return false;
+			}
+		}
+		for(i = row,j=col;i>=0,j>=0;i++,j++) {
+			if(a[i][j] == 1) {
+				return false;
+			}
+		}
+		for (i = row, j = col; j >= 0 && i < a.length; i++, j--)
+            if (a[i][j] == 1)
+                return false;
+		return true;
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int[][] a = new int[n][n];
+		if(NQueens(a,n,0)) {
+			System.out.println("True");
+		}else {
+			System.out.println("False");
+		}
+		for(int i = 0;i<a.length;i++) {
+			for(int j = 0;j<a[0].length;j++) {
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

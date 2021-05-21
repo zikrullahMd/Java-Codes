@@ -1,0 +1,48 @@
+package BackTracking;
+import java.util.*;
+public class Rat_In_Maze {
+	
+	public static boolean isSafe(int[][] a, int row , int col, int n) {
+		if(row > n || col > n)
+			return false;
+		return a[row][col] == 1;
+	}
+	
+	public static boolean RatInMaze(int[][] a, int row , int col, int n, int[][] ans) {
+		int[][] ans = new int[n][n];
+		if(row == n-1 && col == n-1) {
+			ans[row][col] = 1;
+			return true;
+		}
+		
+		if(isSafe(a,row,col,n)) {
+			
+			ans[row][col] = 1;
+			if(isSafe(a,row+1,col,n)) {
+				return true;
+			}
+			if(isSafe(a,row,col+1,n)) {
+				return true;
+			}
+			ans[row][col] = 0;
+			return false;
+		}
+		
+		
+		return false;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int[][] a = new int[n][n];
+		for(int i = 0;i<n;i++) {
+			for(int j = 0;j<n;j++) {
+				a[i][j] = in.nextInt();
+			}
+		}
+		
+	}
+
+}

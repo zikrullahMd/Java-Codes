@@ -1,0 +1,97 @@
+package BackTracking;
+import java.util.*;
+public class Main {
+	
+	public static int[][] NQueens(int[][] a, int n,int row){
+		if(row == n) return true;
+		for(int col = 0;col<n;col++) {
+			if(isSafe(a,row,col)) {
+				a[row][col] = 1;
+				if(NQueens(a,n,row+1)) {
+					return true;
+				}
+				a[row][col] = 0;
+			}
+		}
+		return false;
+	}
+	
+	public boolean isSafe(int[][] a, int row, int col) {
+		//  right
+		for(int i = col;i<a.length;i++) {
+			if(a[row][i] == 1) {
+				return false;
+			}
+		}
+		//left
+		for(int i = col;i>=0;i--) {
+			if(a[row][i] == 1) {
+				return false;
+			}
+		}
+		//top
+		for(int i = row;i>=0;i--) {
+			if(a[row][i] == 1) {
+				return false;
+			}
+		}
+		//bottom
+		for(int i = row;i<a.length;i++) {
+			if(a[row][i] == 1) {
+				return false;
+			}
+		}
+		//bottom-right
+		for(int i = col;i<a.length;i++) {
+			for(int j = row;j<a.length;j++) {
+				if(a[i][j] == 1) {
+					return false;
+				}
+			}
+		}
+		//bottom-left
+		for(int i = col;i<a.length;i++) {
+			for(int j = row;j>=0;j--) {
+				if(a[i][j] == 1) {
+					return false;
+				}
+			}
+		}
+		return true;
+		
+		//top-right
+		for(int i = col;i>=0;i--) {
+			for(int j = row;j<a.length;j++) {
+				
+			}
+		}
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int[][] a = new int[n][n];
+		int[][] ans = NQueens(a,n,0);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

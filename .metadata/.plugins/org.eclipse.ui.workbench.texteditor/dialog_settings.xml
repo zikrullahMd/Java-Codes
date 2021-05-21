@@ -8,6 +8,7 @@
 		<item key="incremental" value="true"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="int i"/>
 			<item value="long[n]"/>
 			<item value="prime.get(mid)"/>
 			<item value="nextlong"/>
@@ -15,7 +16,6 @@
 			<item value="a[i]"/>
 			<item value="longeger"/>
 			<item value="Intervals"/>
-			<item value="int"/>
 		</list>
 		<list key="replacehistory">
 			<item value="long[(int)n]"/>
